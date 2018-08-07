@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_023341) do
+ActiveRecord::Schema.define(version: 2018_08_07_154804) do
 
   create_table "dog_foods", force: :cascade do |t|
     t.string "brand"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "bag_weight"
+  end
+
+  create_table "dogs", force: :cascade do |t|
+    t.string "name"
+    t.string "weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
